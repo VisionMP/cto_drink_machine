@@ -1,0 +1,5 @@
+RegisterServerEvent('PayForDrink')
+AddEventHandler('PayForDrink',function()
+	local xPlayer = exports['cto_framework']:getDataObject()
+	xPlayer.Currency.Remove(Config.Price, source, "cash")
+end)
